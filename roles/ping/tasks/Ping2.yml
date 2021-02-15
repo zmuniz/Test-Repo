@@ -1,0 +1,10 @@
+---
+
+- name: Ping2 out to Nodes
+  win_ping:
+
+- name: Test 
+  debug: 
+    msg: 
+    - '{{ test_var }}'
+

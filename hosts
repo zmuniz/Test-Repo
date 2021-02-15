@@ -1,0 +1,27 @@
+[windows]
+192.168.86.26
+
+[windows:vars]
+ansible_user = zmuniz
+ansible_password = prozak
+ansible_connection = winrm
+ansible_winrm_server_cert_validation = ignore
+
+[win]
+192.168.86.35
+
+[win:vars]
+ansible_user = zmuniz
+ansible_password = prozak
+ansible_connection = winrm
+ansible_winrm_server_cert_validation = ignore
+
+[linux]
+Odogaron
+
+[linux:vars]
+ansible_user = zmuniz
+ansible_password = Muneez012
+
+[dc1]
+

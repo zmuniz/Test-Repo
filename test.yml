@@ -1,0 +1,15 @@
+---
+#ansible-playbook -i hosts ./test.yml --tags test
+#ansible-galaxy collection install my_namespace-my_collection-1.0.0.tar.gz -p ./collections
+
+- hosts: win
+  roles:
+    - ping
+  tags:
+    - test
+
+- hosts: win
+  roles:
+    - virtual_machine
+  tags:
+    - test2

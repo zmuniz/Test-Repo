@@ -1,0 +1,14 @@
+---
+
+- name: Ping out to Nodes
+  win_ping:
+
+- name: Test 
+  debug: 
+    msg: 
+    - '{{ test_var }}'
+
+
+
+#- name: VMware
+#  vmware_guest:

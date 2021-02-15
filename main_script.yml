@@ -1,0 +1,75 @@
+---
+
+# NETWORK_CONFIG -> SERVICES -> CREATE_VMS -> CONFIG_VMS -> ?
+
+#####NETWORK_CONFIG######
+- hosts: dc1
+  roles:
+    - ping
+    - dhcp
+    - dns
+    - ad
+  tags:
+    - network_config
+
+######SERVICES######
+- hosts: horizon
+  roles:
+    - virtual_machine
+  tags:
+    - services
+
+- hosts: grid-license
+  roles:
+    - virtual_machine
+  tags:
+    - services
+
+#- hosts: nagiosxi
+#  roles:
+#    - virtual_machine
+#  tags:
+#    - services
+
+#- hosts: nagiosls
+#  roles:
+#    - virtual_machine
+#  tags:
+#    - services
+
+######CREATE_VMS################
+- hosts: dc1
+  roles:
+    - virtual_machine
+  tags:
+    - create_vms
+
+######CONFIG_VMS#############
+- hosts: instructor
+  roles:
+    - timezone
+    - smartscreen
+    - chrome
+    - gpu
+  tags:
+    - config_vms
+
+- hosts: sysadmin
+  roles:
+    - timezone
+    - smartscreen
+    - gpu
+  tags:
+    - config_vms
+
+- hosts: 
+  roles:
+    - virtual_machine
+  tags:
+    - config_vms
+
+- hosts: dc1
+  roles:
+    - virtual_machine
+  tags:
+    - config_vms
