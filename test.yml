@@ -7,9 +7,3 @@
     - ping
   tags:
     - test
-
-- hosts: win
-  roles:
-    - virtual_machine
-  tags:
-    - test2
